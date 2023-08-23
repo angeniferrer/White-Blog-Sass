@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap");
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: revert;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+textarea {
+  white-space: revert;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([contenteditable]) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+}
+
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: "Kaisei Decol", Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #2b2b2b;
+  transition: 0.5s ease;
+}
+body.show {
+  transform: translateX(-350px);
+}
+
+a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.row > * {
+  max-width: 100%;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+body {
+  height: 100rem;
+}
+
+.header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+}
+.header h3 {
+  text-transform: uppercase;
+  font-size: clamp(3rem, 3vw, 4rem);
+}
+.header--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header--nav {
+  position: absolute;
+  background-color: #ebebeb;
+  top: 7rem;
+  width: 100%;
+  left: 0;
+  height: 0vh;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+@media screen and (min-width: 72rem) {
+  .header--nav {
+    position: static;
+    height: unset;
+    width: unset;
+    overflow: unset;
+    background-color: unset;
+  }
+  .header--nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.header--nav.active {
+  height: 100vh;
+}
+.header--nav a {
+  width: 100%;
+  display: inline-block;
+  padding: 1rem 0;
+  text-align: center;
+}
+.header--nav a:hover {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+@media screen and (min-width: 72rem) {
+  .header--nav a {
+    position: relative;
+    width: 120%;
+  }
+  .header--nav a:hover {
+    background-color: unset;
+    color: #fff;
+  }
+  .header--nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: #2b2b2b;
+    color: #fff;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+  }
+  .header--nav a:hover::before {
+    height: 100%;
+  }
+  .header--nav a.active {
+    color: #fff;
+  }
+  .header--nav a.active::before {
+    height: 100%;
+  }
+}
+.header .toggle--button {
+  cursor: pointer;
+  padding: 3px;
+}
+@media screen and (min-width: 72rem) {
+  .header .toggle--button {
+    display: none;
+  }
+}
+.header .toggle--button span {
+  display: block;
+  width: 4rem;
+  height: 4px;
+  background-color: #2b2b2b;
+  margin: 0.5rem;
+  border-radius: 2rem;
+  transition: 0.5s ease-in-out;
+}
+.header .toggle--button.active span:first-child {
+  transform: rotate(130deg) translate(5px, -20px);
+  width: 3rem;
+}
+.header .toggle--button.active span:nth-child(2) {
+  transform: rotate(90deg);
+}
+.header .toggle--button.active span:last-child {
+  transform: rotate(-130deg) translate(4px, -1px);
+  width: 3rem;
+}
+.header .toggle--button:hover {
+  background-color: #ebebeb;
+  border-radius: 5px;
+}
+.banner {
+  height: 100vh;
+  background-image: url("../../Dist/Image/Banner1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.banner .container {
+  height: 100%;
+}
+.banner--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.banner--wrapper h1 {
+  color: #fff;
+  font-size: clamp(5rem, 10vw, 10rem);
+}
+
+.latest--wrapper h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+.latest--wrapper h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2b2b2b;
+}
+.latest--wrapper p {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+/*# sourceMappingURL=style.css.map */

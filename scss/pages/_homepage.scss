@@ -1,0 +1,50 @@
+@use "../abstract/01-variable" as *;
+@use "../abstract/03-resets" as *;
+@use "../abstract/04-base" as *;
+@use "../abstract/05-grid" as *;
+@use "../components/header" as *;
+
+.banner {
+  height: 100vh;
+  background-image: url("../../Dist/Image/Banner1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .container {
+    height: 100%;
+  }
+  &--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    h1 {
+      color: $clr-light;
+      font-size: clamp(5rem, 10vw, 10rem);
+    }
+  }
+}
+
+.latest {
+  &--wrapper {
+    h2 {
+      font-size: 4rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: $clr-dark;
+    }
+
+    p {
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+  }
+
+  &--blogs {
+  }
+}

@@ -1,0 +1,132 @@
+@use "../abstract/01-variable" as *;
+@use "../abstract/05-grid" as *;
+@use "../abstract/02-mixins" as *;
+
+body {
+  height: 100rem;
+}
+
+.header {
+  background-color: $clr-light;
+  position: fixed;
+  width: 100%;
+
+  & h3 {
+    text-transform: uppercase;
+    font-size: clamp(3rem, 3vw, 4rem);
+  }
+
+  &--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--nav {
+    position: absolute;
+    background-color: $clr-gray;
+    top: 7rem;
+    width: 100%;
+    left: 0;
+    height: 0vh;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+
+    @include mediaQuery(72rem) {
+      position: static;
+      height: unset;
+      width: unset;
+      overflow: unset;
+      background-color: unset;
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+
+    &.active {
+      height: 100vh;
+    }
+
+    a {
+      width: 100%;
+      display: inline-block;
+      padding: 1rem 0;
+      text-align: center;
+      &:hover {
+        background-color: $clr-dark;
+        color: $clr-light;
+      }
+
+      @include mediaQuery(72rem) {
+        position: relative;
+        width: 120%;
+
+        &:hover {
+          background-color: unset;
+          color: $clr-light;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 0%;
+          background-color: $clr-dark;
+          color: $clr-light;
+          z-index: -1;
+          bottom: 0;
+          left: 0;
+          transition: 0.5s ease-in-out;
+        }
+        &:hover::before {
+          height: 100%;
+        }
+        &.active {
+          color: $clr-light;
+          &::before {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .toggle--button {
+    cursor: pointer;
+    padding: 3px;
+    @include mediaQuery(72rem) {
+      display: none;
+    }
+    span {
+      display: block;
+      width: 4rem;
+      height: 4px;
+      background-color: $clr-dark;
+      margin: 0.5rem;
+      border-radius: 2rem;
+      transition: 0.5s ease-in-out;
+    }
+    &.active span:first-child {
+      transform: rotate(130deg) translate(5px, -20px);
+      width: 3rem;
+    }
+
+    &.active span:nth-child(2) {
+      transform: rotate(90deg);
+    }
+
+    &.active span:last-child {
+      transform: rotate(-130deg) translate(4px, -1px);
+      width: 3rem;
+    }
+
+    &:hover {
+      background-color: $clr-gray;
+      border-radius: 5px;
+    }
+  }
+
+  @include mediaQuery(90rem) {
+  }
+}
