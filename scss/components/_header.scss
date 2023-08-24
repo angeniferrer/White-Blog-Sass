@@ -13,7 +13,8 @@ body {
 
   & h3 {
     text-transform: uppercase;
-    font-size: clamp(3rem, 3vw, 4rem);
+    font-weight: bold;
+    font-size: clamp(5rem, 5vw, 6rem);
   }
 
   &--wrapper {
@@ -108,12 +109,13 @@ body {
       transition: 0.5s ease-in-out;
     }
     &.active span:first-child {
-      transform: rotate(130deg) translate(5px, -20px);
+      transform: rotate(130deg) translate(3px, -20px);
       width: 3rem;
     }
 
     &.active span:nth-child(2) {
-      transform: rotate(90deg);
+      // transform: rotate(90deg);
+      opacity: 0;
     }
 
     &.active span:last-child {
