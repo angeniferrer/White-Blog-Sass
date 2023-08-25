@@ -260,6 +260,8 @@
 }
 
 .footer {
+  background-color: $clr-gray;
+
   h3 {
     font-size: 4rem;
     font-weight: bold;
@@ -268,13 +270,17 @@
   p {
     padding: 0.5rem 0;
   }
+
+  @include mediaQuery(90rem) {
+    background-color: $clr-gray;
+  }
 }
 
 .footer--email {
   padding-bottom: 4rem;
 
   input {
-    background-color: $clr-gray;
+    background-color: $clr-light;
     padding: 0.5rem 0.5rem;
     font-size: 1.5rem;
   }
@@ -302,6 +308,7 @@
 }
 
 .footer--footer {
+  background-color: $clr-gray;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

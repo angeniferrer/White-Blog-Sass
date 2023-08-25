@@ -1,0 +1,136 @@
+@use "../abstract" as *;
+@use "../components" as *;
+
+body {
+  height: 100rem;
+}
+
+.about {
+  padding-top: 15rem;
+  h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: left;
+    padding: 2rem 0;
+  }
+  p {
+    line-height: 2;
+    display: flex;
+    text-align: justify;
+    padding-bottom: 1rem;
+  }
+
+  &--wrapper img {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &--text {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+}
+@include mediaQuery(90rem) {
+  .about {
+    &--desc {
+      padding: 3rem 0;
+    }
+  }
+}
+
+.offers {
+  &--wrapper .prices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 4rem;
+    font-weight: bold;
+    padding: 2rem 0;
+  }
+
+  .prices {
+    padding: 4rem 0;
+    li {
+      padding: 1.5rem 0;
+    }
+  }
+
+  .price {
+    background-color: $clr-gray;
+    padding: 4rem 12rem;
+    border-radius: 25px;
+  }
+}
+
+@include mediaQuery(90rem) {
+  .offers {
+    &--wrapper .prices {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+.offer--premium {
+  padding: 1rem 0;
+  a {
+    display: flex;
+    justify-content: center;
+    background-color: $clr-light;
+    margin: 0 auto;
+    width: 10rem;
+    padding: 0.5rem 0;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid $clr-dark;
+  }
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+
+  img {
+    width: 55rem;
+    padding: 5rem 0;
+  }
+
+  p {
+    padding: 4rem 0;
+    text-align: justify;
+    line-height: 3;
+  }
+}
+
+@include mediaQuery(90rem) {
+  .post1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20rem;
+  }
+  .post2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 20rem;
+  }
+}
+
+// sass ./Dist/main.scss ./Dist/css/style.css
+// sass ./scss/main.scss ./Dist/css/style.css --watch
