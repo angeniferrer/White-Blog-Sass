@@ -1,0 +1,49 @@
+@use "../abstract/" as *;
+
+body {
+  height: 100rem;
+}
+
+.blogs2 {
+  img {
+    padding-top: 20rem;
+    width: 100%;
+    // width: 120rem;
+    // height: 95rem;
+  }
+  h2 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .desc {
+    gap: 2rem;
+    text-align: justify;
+    line-height: 2;
+    padding: 3rem 0;
+  }
+}
+
+@include mediaQuery(90rem) {
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,81 @@
+@use "../abstract/" as *;
+
+body {
+  height: 100rem;
+}
+
+.contact {
+  &--wrapper {
+    padding: 20rem 0;
+
+    h2 {
+      font-size: 6rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    p {
+      padding: 1rem 0;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid $clr-dark;
+      padding: 2rem 2rem;
+    }
+
+    .send {
+      display: flex;
+      flex-direction: row-reverse;
+      a {
+        border: 1px solid $clr-dark;
+        padding: 1rem 5rem;
+      }
+    }
+
+    .contacts {
+      padding: 1rem 0;
+
+      .links {
+        padding: 1rem 0;
+        li {
+          padding: 1rem 0;
+        }
+      }
+
+      .infogather {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+
+      .infogather input[placeholder="message"] {
+        padding-bottom: 8rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+@include mediaQuery(90rem) {
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 21rem;
+  }
+
+  .infogather {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+
+    input {
+      width: 80rem;
+      border: 1px solid $clr-dark;
+      padding: 2rem 2rem;
+    }
+  }
+}

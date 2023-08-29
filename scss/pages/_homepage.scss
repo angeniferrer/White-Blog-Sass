@@ -126,6 +126,25 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+
+  h3 {
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  h4 {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 2rem 0;
+  }
+
+  p {
+    text-align: justify;
+    padding-bottom: 2rem;
+    line-height: 2;
+  }
 }
 
 .mostviewed {
@@ -134,31 +153,8 @@
   }
 }
 
-.mostviewed {
-  &--wrapper {
-    h3 {
-      font-size: 6rem;
-      font-weight: bold;
-      text-align: center;
-      padding-bottom: 2rem;
-    }
-
-    h4 {
-      font-size: 3rem;
-      font-weight: bold;
-      padding: 2rem 0;
-    }
-
-    p {
-      text-align: justify;
-      padding-bottom: 2rem;
-      line-height: 2;
-    }
-  }
-
-  .mostviewed1 img {
-    width: 80rem;
-  }
+.mostviewed1 {
+  padding-left: 2rem;
 }
 
 .mostviewed img {
@@ -166,6 +162,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .mostvieweds {
@@ -248,6 +245,7 @@
 
 .partners {
   background-color: $clr-gray;
+  padding: 2rem 0;
 
   h2 {
     font-size: 6rem;

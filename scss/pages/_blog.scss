@@ -5,5 +5,47 @@ body {
 }
 
 .slider {
-  padding: 40rem 0;
+  img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20rem;
+  }
+}
+
+.blogpost {
+  .blogs {
+    padding-bottom: 10rem;
+  }
+
+  .blog a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 3rem;
+
+    h3 {
+      font-size: 3rem;
+      font-weight: bold;
+      padding: 1rem 0;
+    }
+    p {
+      line-height: 3;
+      text-align: justify;
+    }
+    img {
+      width: 40rem;
+    }
+  }
+}
+
+@include mediaQuery(90rem) {
+  .blogs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .blog {
+    align-items: left;
+  }
 }

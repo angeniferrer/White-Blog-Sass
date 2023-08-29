@@ -20,10 +20,6 @@ menu {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
-}
-
 table {
   border-collapse: collapse;
 }
@@ -326,10 +322,45 @@ body {
   height: 100rem;
 }
 
-.slider {
-  padding: 40rem 0;
+.slider img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20rem;
 }
 
+.blogpost .blogs {
+  padding-bottom: 10rem;
+}
+.blogpost .blog a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 3rem;
+}
+.blogpost .blog a h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+.blogpost .blog a p {
+  line-height: 3;
+  text-align: justify;
+}
+.blogpost .blog a img {
+  width: 40rem;
+}
+
+@media screen and (min-width: 90rem) {
+  .blogs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .blog {
+    align-items: left;
+  }
+}
 body {
   height: 100rem;
 }
@@ -555,13 +586,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
-@media screen and (min-width: 90rem) {
-  .mostviewed {
-    background-color: #ebebeb;
-  }
-}
-
 .mostviewed--wrapper h3 {
   font-size: 6rem;
   font-weight: bold;
@@ -578,8 +602,15 @@ body {
   padding-bottom: 2rem;
   line-height: 2;
 }
-.mostviewed .mostviewed1 img {
-  width: 80rem;
+
+@media screen and (min-width: 90rem) {
+  .mostviewed {
+    background-color: #ebebeb;
+  }
+}
+
+.mostviewed1 {
+  padding-left: 2rem;
 }
 
 .mostviewed img {
@@ -587,6 +618,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .mostvieweds h3 {
@@ -665,6 +697,7 @@ body {
 
 .partners {
   background-color: #ebebeb;
+  padding: 2rem 0;
 }
 .partners h2 {
   font-size: 6rem;
@@ -733,6 +766,114 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+body {
+  height: 100rem;
+}
+
+.blogs2 img {
+  padding-top: 20rem;
+  width: 100%;
+}
+.blogs2 h2 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.blogs2 .info {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+.blogs2 .desc {
+  gap: 2rem;
+  text-align: justify;
+  line-height: 2;
+  padding: 3rem 0;
+}
+
+@media screen and (min-width: 90rem) {
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+body {
+  height: 100rem;
+}
+
+.contact--wrapper {
+  padding: 20rem 0;
+}
+.contact--wrapper h2 {
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 3rem 0;
+}
+.contact--wrapper p {
+  padding: 1rem 0;
+}
+.contact--wrapper input {
+  width: 100%;
+  border: 1px solid #2b2b2b;
+  padding: 2rem 2rem;
+}
+.contact--wrapper .send {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.contact--wrapper .send a {
+  border: 1px solid #2b2b2b;
+  padding: 1rem 5rem;
+}
+.contact--wrapper .contacts {
+  padding: 1rem 0;
+}
+.contact--wrapper .contacts .links {
+  padding: 1rem 0;
+}
+.contact--wrapper .contacts .links li {
+  padding: 1rem 0;
+}
+.contact--wrapper .contacts .infogather {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.contact--wrapper .contacts .infogather input[placeholder=message] {
+  padding-bottom: 8rem;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 90rem) {
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 21rem;
+  }
+  .infogather {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .infogather input {
+    width: 80rem;
+    border: 1px solid #2b2b2b;
+    padding: 2rem 2rem;
   }
 }
 
