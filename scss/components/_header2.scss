@@ -22,6 +22,7 @@
   height: 0vh;
   overflow: hidden;
   transition: 0.5s ease-in-out;
+  border-bottom: 0.5px solid $clr-dark;
 
   &.active {
     height: calc(100vh - 7rem);
