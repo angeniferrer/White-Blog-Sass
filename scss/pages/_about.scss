@@ -8,9 +8,9 @@ body {
 .about {
   padding-top: 15rem;
   h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     padding: 2rem 0;
   }
   p {
@@ -21,8 +21,7 @@ body {
   }
 
   &--wrapper img {
-    display: flex;
-    margin: 0 auto;
+    width: 100%;
   }
 
   &--text {
@@ -35,6 +34,10 @@ body {
   .about {
     &--desc {
       padding: 3rem 0;
+    }
+    h1 {
+      text-align: left;
+      font-size: 6rem;
     }
   }
 }
@@ -106,7 +109,7 @@ body {
   gap: 2rem;
 
   img {
-    width: 55rem;
+    width: 100%;
     padding: 5rem 0;
   }
 

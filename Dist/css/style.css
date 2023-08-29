@@ -211,9 +211,9 @@ body {
   padding-top: 15rem;
 }
 .about h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   padding: 2rem 0;
 }
 .about p {
@@ -223,8 +223,7 @@ body {
   padding-bottom: 1rem;
 }
 .about--wrapper img {
-  display: flex;
-  margin: 0 auto;
+  width: 100%;
 }
 .about--text {
   display: flex;
@@ -235,6 +234,10 @@ body {
 @media screen and (min-width: 90rem) {
   .about--desc {
     padding: 3rem 0;
+  }
+  .about h1 {
+    text-align: left;
+    font-size: 6rem;
   }
 }
 .offers--wrapper .prices {
@@ -295,7 +298,7 @@ body {
   gap: 2rem;
 }
 .posts img {
-  width: 55rem;
+  width: 100%;
   padding: 5rem 0;
 }
 .posts p {
@@ -322,11 +325,14 @@ body {
   height: 100rem;
 }
 
+.slider {
+  padding-top: 20rem;
+  padding-bottom: 5rem;
+}
 .slider img {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 20rem;
 }
 
 .blogpost .blogs {
@@ -506,6 +512,7 @@ body {
   font-size: 6rem;
   font-weight: bold;
   text-align: center;
+  padding: 4rem 0;
 }
 .latest--wrapper h3 {
   font-size: 3rem;
@@ -566,7 +573,7 @@ body {
   flex-direction: row;
   justify-content: center;
   gap: 5rem;
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 .latest--icons ul li a:hover {
   color: #2b2b2b;
@@ -590,7 +597,7 @@ body {
   font-size: 6rem;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 2rem;
+  padding: 5rem 0;
 }
 .mostviewed--wrapper h4 {
   font-size: 3rem;
@@ -607,6 +614,9 @@ body {
   .mostviewed {
     background-color: #ebebeb;
   }
+  .mostviewed img {
+    display: flex;
+  }
 }
 
 .mostviewed1 {
@@ -614,29 +624,22 @@ body {
 }
 
 .mostviewed img {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
 }
 
+.mostvieweds {
+  gap: 2rem;
+}
 .mostvieweds h3 {
   font-size: 6rem;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
 }
-
-.mostvieweds {
-  gap: 2rem;
-}
-
 @media screen and (min-width: 90rem) {
   .mostvieweds {
     display: grid;
-    flex-direction: column;
-    grid-template-columns: 70% 1fr;
+    grid-template-columns: 75% 1fr;
   }
 }
 
@@ -645,7 +648,6 @@ body {
   flex-direction: column;
   padding-left: 2rem;
 }
-
 .mostviewgroup img {
   width: 40rem;
   height: 31rem;
@@ -657,19 +659,17 @@ body {
   font-size: 6rem;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 2rem;
+  padding: 4rem 0;
 }
 .whatwedo p {
   text-align: justify;
   line-height: 2;
   padding-bottom: 3rem;
 }
-
 @media screen and (min-width: 90rem) {
   .whatwedo {
     display: flex;
     flex-direction: column;
-    padding: 4rem 0;
   }
 }
 
@@ -679,6 +679,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     gap: 2rem;
+    padding-bottom: 7rem;
   }
 }
 .latest--do p {
@@ -725,7 +726,6 @@ body {
     background-color: #ebebeb;
   }
 }
-
 .footer--email {
   padding-bottom: 4rem;
 }
@@ -743,7 +743,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 .footer--last {
   display: flex;
   flex-direction: row;
@@ -752,7 +751,6 @@ body {
 .footer--last li {
   padding-bottom: 1rem;
 }
-
 .footer--footer {
   background-color: #ebebeb;
   display: flex;
@@ -814,7 +812,7 @@ body {
 }
 
 .contact--wrapper {
-  padding: 20rem 0;
+  padding: 20rem 2rem;
 }
 .contact--wrapper h2 {
   font-size: 6rem;
